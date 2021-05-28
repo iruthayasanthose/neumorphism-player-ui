@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player UI</title>
+
+</head>
+<body>
+    <div class="phone">
+        <div class="inner">
+          <div class="header">
+            <button class="button back">
+              <i class="fa fa-long-arrow-left"></i>
+            </button>
+            <h2 class="title">My Playlist</h2>
+            <button class="button more">
+              <i class="fa fa-share-alt"></i>
+            </button>
+          </div>
+          
+          <div class="cover" id="cover">
+            <img id="rotate" src="greenlet.jpeg">
+          </div>
+          <div class="disk" id="disk">
+            <img id="stop" src="greenlet.jpeg">
+          </div>
+          
+          <div class="info">
+            <h3 class="song">Sober Up</h3>
+            <h4 class="artist">AJR/Rviers Cuomo</h4>
+          </div>
+          
+          <div class="time">
+            <div class="bar"></div>
+          </div>
+          
+          <div class="control">
+            <button class="control-button prev">
+              <i class="fa fa-step-backward"></i>
+            </button>
+            <button class="play-button play" onclick="myFunction()">
+              <i class="fa fa-play" id="play"></i>
+              <i class="fa fa-pause" id="pause"></i>
+            </button>
+            <button class="control-button forward">
+              <i class="fa fa-step-forward"></i>
+            </button>
+          </div>
+          
+        </div>
+      </div> 
+      <script>
+          function myFunction() {
+    var a = document.getElementById("cover");
+    var b = document.getElementById("disk");
+    var c = document.getElementById("pause");
+    var d = document.getElementById("play");
+    if (a.style.display === "none" && c.style.display === "none") {
+      a.style.display = "block";
+      b.style.display = "none";
+      c.style.display = "block";
+      d.style.display = "none";
+    } else {
+        a.style.display = "none";
+      b.style.display = "block";
+      c.style.display = "none";
+      d.style.display = "block";
+    }
+  } 
+      </script>
+</body>
+</html>
